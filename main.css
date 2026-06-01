@@ -1,0 +1,122 @@
+*{
+    background: #222;
+    color:#fff;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #333;
+    border-bottom:10px solid #555;
+    text-shadow: 2px 2px 4px #000;
+}
+div {
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+div#produtos table{
+    width: 100%;
+    border-collapse: collapse;
+    border:2px solid #555;
+    background-color: #777;
+    text-align: left;
+}
+div#produtos th{
+    background-color:#111;
+    color:#ddd;
+}
+div#produtos td, div#produtos th{
+    padding:10px;
+}
+div#produtos tr:nth-child(even) td{
+    background-color: #444;
+}
+input, select, button{
+    padding:10px;
+    margin:4px;
+    border:1px solid black;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #555;
+}
+
+#formulario, #filtros {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+#formulario p, #filtros p {
+    background-color: transparent;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+#form-produto, #filtros {
+    background-color: transparent;
+}
+
+#form-produto input, #form-produto select {
+    background-color: #444;
+}
+
+#btn-salvar {
+    background-color: #2a6;
+    border-color: #2a6;
+}
+#btn-salvar:hover {
+    background-color: #184;
+}
+
+#btn-cancelar {
+    background-color: #888;
+}
+
+.btn-editar {
+    background-color: #36a;
+    border-color: #36a;
+    padding: 6px 10px;
+    margin: 2px;
+}
+.btn-editar:hover {
+    background-color: #248;
+}
+
+.btn-excluir {
+    background-color: #a33;
+    border-color: #a33;
+    padding: 6px 10px;
+    margin: 2px;
+}
+.btn-excluir:hover {
+    background-color: #822;
+}
+
+.mensagem {
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    width: 90%;
+}
+.mensagem.sucesso {
+    background-color: #2a6;
+    color: #fff;
+}
+.mensagem.erro {
+    background-color: #a33;
+    color: #fff;
+}
+.oculto {
+    display: none;
+}

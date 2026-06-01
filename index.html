@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CRUD de Produtos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <h1>PRODUTOS DO BACKEND</h1>
+
+    <div id="mensagem" class="mensagem oculto"></div>
+
+    <div id="formulario">
+        <p id="titulo-form">Cadastrar novo produto</p>
+        <form id="form-produto">
+            <input type="hidden" id="produto-id" value="" />
+            <input type="text" id="form-nome" placeholder="Nome *" required />
+            <select id="form-tipo" required>
+                <option value="">- Tipo * -</option>
+                <option value="notebook">Notebook</option>
+                <option value="projetor">Projetor</option>
+            </select>
+            <select id="form-status">
+                <option value="disponivel">Disponível</option>
+                <option value="emprestado">Emprestado</option>
+                <option value="manutencao">Em Manutenção</option>
+            </select>
+            <input type="text" id="form-descricao" placeholder="Descrição" />
+            <button type="submit" id="btn-salvar">Salvar</button>
+            <button type="button" id="btn-cancelar" class="oculto">Cancelar</button>
+        </form>
+    </div>
+
+    <div id="filtros">
+        <p>Filtros de pesquisa</p>
+        <input type="text" id="nome" placeholder="Nome" value="" />
+        <select id="status">
+            <option value=""> - Status - </option>
+            <option value="emprestado">Emprestado</option>
+            <option value="disponivel">Disponível</option>
+            <option value="manutencao">Em Manutenção</option>
+        </select>
+        <select id="tipo">
+            <option value=""> - Tipo - </option>
+            <option value="notebook">Notebook</option>
+            <option value="projetor">Projetor</option>
+        </select>
+        <input type="text" id="descricao" placeholder="Coloque a descrição" value="" />
+        <button id="filtrar" onclick="getProducts()">Filtrar</button>
+    </div>
+
+    <div id="produtos">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+    <script src='main.js'></script>
+</body>
+
+</html>
